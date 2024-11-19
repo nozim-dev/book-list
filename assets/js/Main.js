@@ -81,8 +81,6 @@ document
         showNotification("Kitob topilmadi!", "Xatolik!", "#FF0000");
         return;
       }
-
-
       async function FetchData() {
         await fetch("http://localhost:3000/myBookList", {
           method: "POST",
