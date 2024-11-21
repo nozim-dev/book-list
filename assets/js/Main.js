@@ -69,7 +69,7 @@ document
     }
 
     try {
-      let data = await fetch("https://my-json-server.typicode.com/nozim-dev/book-list-data/main/BookList")
+      let data = await fetch("https://my-json-server.typicode.com/nozim-dev/book-list-data/BookList")
         .then((res) => {
           return res.json();
         })
@@ -82,7 +82,7 @@ document
         return;
       }
       async function FetchData() {
-        await fetch("https://my-json-server.typicode.com/nozim-dev/book-list-data/main/myBookList", {
+        await fetch("https://my-json-server.typicode.com/nozim-dev/book-list-data/myBookList", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -159,7 +159,7 @@ document
   });
 
 window.addEventListener("DOMContentLoaded", async () => {
-  await fetch("https://my-json-server.typicode.com/nozim-dev/book-list-data/main/myBookList")
+  await fetch("https://my-json-server.typicode.com/nozim-dev/book-list-data/myBookList")
     .then((res) => {
       return res.json();
     })
@@ -238,7 +238,7 @@ async function Delete(id) {
 
   try {
     async function FetchData() {
-      const response = await fetch(`https://my-json-server.typicode.com/nozim-dev/book-list-data/main/myBookList/${id}`, {
+      const response = await fetch(`https://my-json-server.typicode.com/nozim-dev/book-list-data/myBookList/${id}`, {
         method: "DELETE",
       });
 
@@ -284,7 +284,7 @@ document
 
     try {
       const response = await fetch(
-        `https://my-json-server.typicode.com/nozim-dev/book-list-data/main/myBookList/${idBook}`
+        `https://my-json-server.typicode.com/nozim-dev/book-list-data/myBookList/${idBook}`
       );
       if (!response.ok)
         throw new Error("Failed to fetch the existing book data.");
@@ -292,7 +292,7 @@ document
       console.log(existingData);
 
       async function FetchData() {
-        await fetch(`https://my-json-server.typicode.com/nozim-dev/book-list-data/main/myBookList/${idBook}`, {
+        await fetch(`https://my-json-server.typicode.com/nozim-dev/book-list-data/myBookList/${idBook}`, {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
@@ -327,7 +327,7 @@ function showNotification(message, title, color) {
 let search = document.querySelector("#search").addEventListener("keyup", async (e) => {
   let inputValue = e.target.value.toLowerCase();
   try {
-    await fetch("https://my-json-server.typicode.com/nozim-dev/book-list-data/main/myBookList").then((res) => {
+    await fetch("https://my-json-server.typicode.com/nozim-dev/book-list-data/myBookList").then((res) => {
       return res.json();
     }).then((data) => {
       let newData = data.filter((item) => item.bookTitle.toLowerCase().includes(inputValue));
