@@ -11,7 +11,7 @@ document.querySelector(".SignIn_form").addEventListener("submit", (e) => {
         password.style.borderColor = "#EBEBEB";
         document.querySelector("label[for='username']").style.color = "#151515";
         document.querySelector("label[for='pass']").style.color = "#151515";
-        window.location.href = "http://127.0.0.1:5500/Pages/Main.html";
+        window.location.href = "./Pages/Main.html";
     } else {
         document.querySelector(".message").textContent = "Parol mos emas!"
         username.style.borderColor = "#FF4D4F";
