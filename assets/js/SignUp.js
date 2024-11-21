@@ -14,7 +14,7 @@ document.querySelector(".formSignUp").addEventListener("submit", (e) => {
             password: pass.value
         }))
 
-        window.location.href = "./index.html";
+        window.location.href = "/";
 
     } else if (pass.value !== confirmPass.value) {
         console.log("Bir xil emas");
